@@ -1,0 +1,78 @@
+body {
+  background:linear-gradient(rgb(237, 82, 164),rgb(25, 199, 247));
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  width: fit-content;
+}
+
+.weapon {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.weapon:hover {
+  transform: scale(1.05);
+}
+
+#weapons {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+#roundResult {
+  margin-top: 1.6rem;
+  font-size: 1.4rem;
+}
+
+#currentResult {
+  display: flex;
+  flex-direction: row;
+}
+
+#player,#computer,#separator {
+  font-size: 2rem;
+}
+
+#continue {
+  color: rgb(0, 0, 0);
+}
+
+#separator {
+  margin: 0px 15px;
+}
+
+#size {
+  width: 120px;
+  min-height: 120px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+#play {
+    height:fit-content;
+    width:fit-content;
+    display: contents;
+    margin: 2rem;
+    background-color: rgb(0, 0, 0);
+    border-radius: 1rem;
+    color: #26595b;
+    display: inline;
+    font-size: 2rem;
+}
+
+#play:hover {
+    color: #ffffff;
+}
