@@ -1,20 +1,43 @@
 body {
-  background:linear-gradient(rgb(237, 82, 164),rgb(25, 199, 247));
+  background-color: #bde0fe;
+  font-family: Arial, sans-serif; /* Adding a font for better readability */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
 }
 
 #container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 1rem;
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
 }
 
 button {
   width: fit-content;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .weapon {
-  width: 120px;
-  height: 120px;
+  width: 20vw;
+  height: 20vw;
+  max-width: 120px;
+  max-height: 120px;
   border-radius: 50%;
   transition: all 0.3s;
 }
@@ -26,26 +49,28 @@ button {
 #weapons {
   margin-top: 1rem;
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 15px;
 }
 
 #roundResult {
   margin-top: 1.6rem;
   font-size: 1.4rem;
+  text-align: center;
 }
 
 #currentResult {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
 }
 
-#player,#computer,#separator {
+#player, #computer, #separator {
   font-size: 2rem;
-}
-
-#continue {
-  color: rgb(0, 0, 0);
+  margin: 0 0.5rem;
 }
 
 #separator {
@@ -53,8 +78,10 @@ button {
 }
 
 #size {
-  width: 120px;
-  min-height: 120px;
+  width: 20vw;
+  max-width: 120px;
+  min-height: 20vw;
+  max-height: 120px;
 }
 
 .hidden {
@@ -62,17 +89,56 @@ button {
 }
 
 #play {
-    height:fit-content;
-    width:fit-content;
-    display: contents;
-    margin: 2rem;
-    background-color: rgb(0, 0, 0);
-    border-radius: 1rem;
-    color: #26595b;
-    display: inline;
-    font-size: 2rem;
+  padding: 1rem 2rem;
+  background-color: rgb(0, 0, 0);
+  border-radius: 1rem;
+  color: #26595b;
+  font-size: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: color 0.3s;
 }
 
 #play:hover {
-    color: #ffffff;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  #play {
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+  }
+
+  #player, #computer, #separator {
+    font-size: 1.5rem;
+  }
+
+  #roundResult {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #play {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+  }
+
+  #player, #computer, #separator {
+    font-size: 1.2rem;
+  }
+
+  #roundResult {
+    font-size: 1rem;
+  }
+
+  .weapon {
+    width: 30vw;
+    height: 30vw;
+  }
+
+  #size {
+    width: 30vw;
+    min-height: 30vw;
+  }
 }

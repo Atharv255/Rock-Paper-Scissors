@@ -47,6 +47,7 @@ function playRound(playerSelection) {
     if (playerScore == 10 || playerScore > 10) {
       let finalResult = document.getElementById("summary");
       finalResult.innerHTML = "You won the Game! Congratulations!";
+      finalResult.style.color = "#7c1fad"
       finalResult = document.getElementById("continue");
       finalResult.innerHTML =
         "If you want to play more, please, press the button!";
@@ -60,6 +61,7 @@ function playRound(playerSelection) {
     if (computerScore == 10 || computerScore > 10) {
       let finalResult = document.getElementById("summary");
       finalResult.innerHTML = "You lost the Game! Play again!";
+      finalResult.style.color = "red";
       finalResult = document.getElementById("continue");
       finalResult.innerHTML =
         "If you want to play more, please, press the button!";
