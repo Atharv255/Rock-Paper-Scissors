@@ -1,6 +1,6 @@
 body {
   background-color: #bde0fe;
-  font-family: Arial, sans-serif; /* Adding a font for better readability */
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   display: flex;
@@ -68,7 +68,9 @@ button:hover {
   margin-top: 1rem;
 }
 
-#player, #computer, #separator {
+#player,
+#computer,
+#separator {
   font-size: 2rem;
   margin: 0 0.5rem;
 }
@@ -108,13 +110,20 @@ button:hover {
     font-size: 1.5rem;
     padding: 0.5rem 1rem;
   }
-
-  #player, #computer, #separator {
+  #player,
+  #computer,
+  #separator {
     font-size: 1.5rem;
   }
-
   #roundResult {
     font-size: 1.2rem;
+  }
+  .weapon,
+  #size {
+    width: 25vw;
+    height: 25vw;
+    max-width: 100px;
+    max-height: 100px;
   }
 }
 
@@ -123,22 +132,22 @@ button:hover {
     font-size: 1.2rem;
     padding: 0.5rem;
   }
-
-  #player, #computer, #separator {
+  #player,
+  #computer,
+  #separator {
     font-size: 1.2rem;
   }
-
   #roundResult {
     font-size: 1rem;
   }
-
-  .weapon {
-    width: 30vw;
-    height: 30vw;
-  }
-
+  .weapon,
   #size {
     width: 30vw;
-    min-height: 30vw;
+    height: 30vw;
+    max-width: 80px;
+    max-height: 80px;
+  }
+  #weapons {
+    gap: 10px;
   }
 }
